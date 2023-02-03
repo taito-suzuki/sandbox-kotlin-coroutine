@@ -25,10 +25,10 @@ val n = 100
 
 fun main() {
     // createTestData(n) テストデータ作成用
-    // test("exists1", n, ::exists1)
-    // test("exists2", n, ::exists2)
-    // testAsync("exists2Async", n, ::exists2Async)
-    // testKotlinAsync("exists2KotlinAsync", n, ::exists2KotlinAsync)
+    test("exists1", n, ::exists1)
+    test("exists2", n, ::exists2)
+    testAsync("exists2Async", n, ::exists2Async)
+    testKotlinAsync("exists2KotlinAsync", n, ::exists2KotlinAsync)
     testAsync2("exists2Async2", n, ::exists2Async2)
 }
 
@@ -230,6 +230,7 @@ fun exists2Async2(cli: S3Client, n: Int, latencies: MutableList<Long>, lock: Loc
             }
         }.awaitAll()
     }
+    pool.shutdown()
 }
 
 fun percentile(data: List<Long>, p: Double): Long {
