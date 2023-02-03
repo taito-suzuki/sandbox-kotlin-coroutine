@@ -17,7 +17,8 @@ dependencies {
     // Coroutineを使用するために必要となるライブラリ
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     // https://mvnrepository.com/artifact/software.amazon.awssdk/s3
-    implementation("software.amazon.awssdk:s3:2.17.172")
+    // implementation("software.amazon.awssdk:s3:2.17.172")
+    implementation("software.amazon.awssdk:s3:2.19.28")
 
     implementation("aws.sdk.kotlin:s3:0.20.0-beta")
 }
