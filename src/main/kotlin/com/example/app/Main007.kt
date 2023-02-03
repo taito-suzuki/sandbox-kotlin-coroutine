@@ -21,7 +21,7 @@ import kotlin.coroutines.suspendCoroutine
 import kotlin.math.ceil
 
 val BUCKET = "taito0625-delete-me"
-val n = 100
+val n = 1000
 
 fun main() {
     // createTestData(n) テストデータ作成用
